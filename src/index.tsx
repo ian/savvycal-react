@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { createContext, useEffect, useState } from "react"
 import useScript from "react-script-hook"
 
-const SavvyCalContext = React.createContext({})
+const SavvyCalContext = createContext({})
 
 type SavvyCalProviderProps = {
   children: JSX.Element

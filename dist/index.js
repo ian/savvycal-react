@@ -23,40 +23,37 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useSavvyCal = exports.SavvyCalProvider = void 0;
-var react_1 = __importStar(require("react"));
-var react_script_hook_1 = __importDefault(require("react-script-hook"));
-var SavvyCalContext = react_1.default.createContext({});
+const react_1 = __importStar(require("react"));
+const react_script_hook_1 = __importDefault(require("react-script-hook"));
+const SavvyCalContext = react_1.createContext({});
 function SavvyCalProvider(props) {
-    var children = props.children;
-    var value = useProvider();
+    const { children } = props;
+    const value = useProvider();
     return (react_1.default.createElement(SavvyCalContext.Provider, { value: value }, children));
 }
 exports.SavvyCalProvider = SavvyCalProvider;
-var useSavvyCal = function () {
-    // @ts-ignore
+const useSavvyCal = () => {
     return react_1.default.useContext(SavvyCalContext);
 };
 exports.useSavvyCal = useSavvyCal;
 function useProvider() {
-    var _a = react_1.useState(false), isLoaded = _a[0], setLoaded = _a[1];
-    // const [instance, setInstance] = useState(null)
-    var _b = react_script_hook_1.default({
+    const [isLoaded, setLoaded] = react_1.useState(false);
+    const [loading, error] = react_script_hook_1.default({
         src: "https://embed.savvycal.com/v1/embed.js",
-    }), loading = _b[0], error = _b[1];
-    react_1.useEffect(function () {
+    });
+    react_1.useEffect(() => {
         if (loading === false) {
             setLoaded(true);
-            // @ts-ignore
             window.SavvyCal("init");
         }
     }, [loading]);
-    var open = function (opts) {
-        // @ts-ignore
+    const open = (opts) => {
         window.SavvyCal("open", opts);
     };
     return {
-        isLoaded: isLoaded,
-        error: error,
-        open: open,
+        isLoaded,
+        error,
+        open,
     };
 }
+//# sourceMappingURL=index.js.map
