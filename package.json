@@ -2,8 +2,8 @@
   "name": "savvycal-react",
   "version": "0.1.0",
   "description": "React bindings for SavvyCal",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "lib/**/*"
   ],
