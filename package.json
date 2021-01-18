@@ -1,0 +1,28 @@
+{
+  "name": "savvycal-react",
+  "version": "0.1.0",
+  "description": "React bindings for SavvyCal",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GraphQL",
+    "GQL"
+  ],
+  "author": "Ian Hunter",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-script-hook": "^1.2.1"
+  }
+}
