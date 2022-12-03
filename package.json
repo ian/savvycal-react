@@ -8,12 +8,12 @@
     "lib/**/*"
   ],
   "scripts": {
+    "clean": "rm -rf dist/",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "GraphQL",
-    "GQL"
+    "savvycal"
   ],
   "author": "Ian Hunter",
   "license": "ISC",
